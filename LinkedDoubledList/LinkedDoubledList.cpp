@@ -78,12 +78,15 @@ public:
     }
 
     void Delete(T intData) {
-        Node<T>* current = head;
-        while (current->next != nullptr) {
+        Node<T>* current = head; 
+
+        if (current->data == intData) {
+            current->prev->next = current->next;
+            current->next->prev = current->prev;
+            free(current);
+        }
+        else{
             current = current->next;
-            if (current->next->data == intData) {
-                current->next = nullptr;
-            }
         }
 
         
@@ -92,10 +95,10 @@ public:
 
 int main() {
     DoublyLinkedList<int> dll;
-    std::cout << "Select Menu :";
-    std::cout << "1. Insert";
-    std::cout << "2. Print";
-    std::cout << "3. Delete";
+    std::cout << "Select Menu :"<< std::endl;
+    std::cout << "1. Insert"<< std::endl;
+    std::cout << "2. Print"<< std::endl;
+    std::cout << "3. Delete" << std::endl;
 
     
     dll.insertAtBeginning(5);
@@ -109,6 +112,10 @@ int main() {
 
     std::cout << "Backward: ";
     dll.printBackward();
+
+    dll.Delete(5);
+
+    dll.printForward();
 
     return 0;
 }
