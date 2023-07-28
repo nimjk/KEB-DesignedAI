@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ConsoleApplication1"
+    "\\BinaryTree",
+    "\\ConsoleApplication1",
+    "\\Example1",
+    "\\LinkedDoubledList"
   ],
-  "SelectedNode": "\\ConsoleApplication1\\ConsoleApplication1.cpp",
+  "SelectedNode": "\\BinaryTree\\BinaryTree.cpp",
   "PreviewInSolutionExplorer": false
 }
