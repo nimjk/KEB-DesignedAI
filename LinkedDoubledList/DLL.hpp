@@ -82,7 +82,7 @@ public:
         if (current->data == intData) {
             current->prev->next = current->next;
             current->next->prev = current->prev;
-            free(current);
+            delete(current);
         }
         else{
             current = current->next;

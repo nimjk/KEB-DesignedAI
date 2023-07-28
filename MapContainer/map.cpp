@@ -9,6 +9,11 @@ int main(){
     myMap.insert(pair<string,int>("Banana",300));
     myMap.insert(pair<string,int>("Copper",500));
     myMap.insert(pair<string,int>("TikTok",1000));
+    myMap.insert(pair<string,int>("100",100));
+    myMap.insert(pair<string,int>("200",200));
+    myMap.insert(pair<string,int>("300",300));
+    myMap.insert(pair<string,int>("500",500));
+    myMap.insert(pair<string,int>("1000",1000));
 
     map<string,int>::iterator it;
 
